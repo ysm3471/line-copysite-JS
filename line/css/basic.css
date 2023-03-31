@@ -1,0 +1,730 @@
+@charset "UTF-8";
+body {
+	font-family:Arial, Helvetica, sans-serif;
+
+}
+a {color:inherit}
+
+/* top-menu */
+#top_menu {
+	width:100%;
+	height:75px;
+	position:fixed;
+	box-shadow:0 1px 0 0 rgba(0,0,0,.1); 
+	/* box-shadow : x y blur크기 두께 색상 */
+	background:#fff;
+	z-index:9999;
+}
+	/* js 관련 */
+	.focus_page {
+		display: block;
+		content: "";
+		position: absolute;
+		width:93.3281px;
+		height:4px;
+		background:#111;
+		bottom:17px;
+		left:0;
+		transition:.3s;
+	}
+.top_logo {
+	position:absolute;
+	top:30px;
+	left:30px;
+}
+.top_list {
+	position:relative;
+	width:381px;
+	margin:auto;
+	height:75px;
+	white-space:nowrap;
+	/* 리스트 크기를 넘어가도 아래로 넘어가지 않음 */
+}
+.top_list li {
+	display:inline-block;
+	line-height:75px;
+	margin-right:70px;
+}
+.top_list li a {
+	font-weight:700;
+}
+.top_lang {
+	position:absolute;
+	right:50px;
+	top:28px;
+	display:table-cell;
+	/* li 가운데 정렬 */
+	cursor: pointer;
+}
+	/* js 관련 */
+	.top_langlist {
+		position:absolute;
+		right:27px;
+		top:58px;
+		padding:10px 25px;
+		border:1px black solid;
+		background:#fff;
+		display:none;
+	}
+	.top_langlist li a {
+		line-height:30px;
+		font-weight:bold;
+		font-size:14px;
+		color:#777;
+	}
+	.top_langlist li a.focusing {
+		color:#111;
+	}
+.top_lang li {
+	display:inline-block;
+	vertical-align:middle;
+}
+.top_lang .icon {
+	font-size:19px;
+	margin-right:5px;
+}
+.top_lang .txt {
+	font-size:14px;
+	font-weight:bold;
+}
+.top_lang .txt::before {
+	display: block;
+	content: "";
+	position: absolute;
+	border: 3px solid transparent;
+	border-top-color: #111;
+	top:8px;
+	left:50px;
+}
+
+/* main */
+
+.center {
+	width:1200px;
+	margin:auto;
+	position:relative;
+}
+
+/* top_banner */
+#top_banner {
+	width:100%;
+	min-width:1440px;
+	height:969px;
+	color:#fff;
+	position:relative;
+}
+#top_banner .banner_wrap {
+	width:100%;
+	min-height:800px;
+}
+#top_banner .banner_wrap img {
+	width:100%;
+	min-height:800px;
+
+}
+#top_banner .banner_txt {
+	position:absolute;
+	bottom:calc(50% - 250px);
+	left:142px;
+	white-space:nowrap;
+}
+#top_banner h2 {
+	font-size:140px;
+	font-weight:bold;
+	text-align:left;	
+	margin-bottom:30px;	
+}
+#top_banner .banner_txt p {
+	font-size:40px;
+	text-indent:7px;
+}
+#top_banner .download {
+	margin:45px 0 0 5px;
+}
+#top_banner .top {
+	margin:0 0 15px 10px;
+	position:relative;
+}
+#top_banner .download_logo img {
+	width:25px;
+	height:24px;
+	position:relative;
+	top:7px;
+}
+#top_banner .download_txt {
+	margin-left:3px;
+	font-size:15px;
+	font-weight:bold;
+	letter-spacing:-1px;
+}
+.download .bottom {
+	margin-left:10px;
+}
+.download .bottom li {
+	display:inline-block;
+}
+.download .bottom a {
+	width:60px;
+	height:60px;
+	border:1px rgba(255,255,255,.5) solid;	
+	border-radius:5px;
+	background:url("../img/sprite-download-list.png") no-repeat 0 8px / 218px 142px;
+	display:block;
+}
+.download .bottom a:hover {
+	background-color:#07b53b;
+	border-color:rgba(255,255,255,.8);
+}
+.download .bottom .ios {
+	background-position-x:9px
+}
+.download .bottom .android {
+	background-position-x:-34px
+}
+.download .bottom .pc {
+	background-position-x:-82px
+}
+
+/* main top txt */
+
+#main_top {
+	text-align:center;
+	margin-top:60px;
+	padding-top:100px;
+	letter-spacing:-1px;	
+	min-width:1440px;
+}
+#main_top h2 {
+	font-size:70px;
+	font-weight:bold;
+	margin-bottom:30px;
+
+}
+#main_top p {
+	font-size:20px;
+	color:#616161;
+	line-height:1.6;
+}
+
+/* section1 */
+#section1 {
+	position:relative;
+	margin-top:90px;
+	min-width:1440px;
+}
+
+#section1 .grid {
+	height:calc(100% - 10px);
+	width:2px;
+	background-image: linear-gradient(180deg,#b2b2b2,#b2b2b2 2px,transparent 0,transparent 5px);
+	/* 
+	그라데이션으로 grid 선을 그리기
+	첫번째색, 두번째색 얼마나 길게, 세번째색 얼마나 길게(지금은 0이라서 바로), 네번째색 얼마나 길게 
+	*/
+	background-size: 1px 5px;
+	background-repeat: repeat-y;
+	position:absolute;
+	left:50%;
+}
+#section1 ul {
+	display:flex;
+	flex-wrap:wrap;
+}
+#section1 li {
+	position:relative;
+	width:1200px;
+	height:700px;
+}
+#section1 li::before {
+	display:block;
+	content:"";
+	width:9px;
+	height:9px;
+	border:1px solid rgba(0,0,0,.2);
+	border-radius:100%;
+	position:absolute;
+	left:50%;
+	transform: translate(-44%);
+	top:-10px;
+	background:white;
+}
+.section1-txt {
+	position:absolute;
+	width:520px;
+	height:100px;
+	z-index:200;
+}
+#section1 .right-txt {	
+	top:18%;	
+	left:30px;
+}
+#section1 .left-txt {
+	top:18%;	
+	right:30px;
+}
+.section1-txt img {
+	border:.5px rgba(0,0,0,.1) solid;
+	border-radius:16px;
+	margin-bottom:30px;
+}
+.section1-txt h3 {
+	font-size:40px;
+	font-weight:bold;
+	margin-bottom:20px;
+}
+.section1-txt p {
+	letter-spacing:-1px;
+}
+.section1-txt .sub_title {
+	line-height:1.56;
+	font-size:18px;
+	color:#07b53b;
+	font-weight:bold;
+	margin-bottom:10px;
+}
+.section1-txt .detail {
+	width:480px;
+	word-break: keep-all;
+	font-size:17px;
+	line-height:1.6;
+	color:#777
+}
+.section1-txt .link {
+	margin-top:50px;	
+}
+.section1-txt .link a {
+	display:block;
+	float:left;	
+	border:1px solid rgba(0,0,0,.2);		
+	height:60px;	
+	border-radius:5px;	
+	margin-right:5px;	
+}
+.section1-txt .link a:hover {
+	background-color:#07b53b;
+	border-color:rgba(255,255,255,.8);
+	color:#fff;
+}
+.section1-txt .link .icon {
+	width:60px;
+	background:url("../img/sprite-download-list.png") no-repeat 10px -42px / 218px 142px;
+}
+.section1-txt .link .apple:hover, .section1-txt .link .google:hover {
+	background-position-y:7px;
+}
+.section1-txt .link .google {
+	background-position-x:-35px;
+}
+.section1-txt .more {
+	width:145.5px;
+	text-align:center;
+}
+.section1-txt .more .icon {
+	display:inline-block;
+	background:url("../img/sprite-download-list.png") -187px -42px / 218px 142px;	
+	width: 24px;
+	height:60px;
+	margin-right:5px;
+}
+.section1-txt .more:hover .icon {
+	background-position-y:9px;
+}
+.section1-txt .more .txt {
+	display:inline-block;
+	height:60px;
+	vertical-align:middle;
+	line-height:10px;
+	font-size:13px;
+	font-weight:bold;
+}
+.section1-img {
+	position:absolute;
+	width:830px;
+	height:100px;
+}
+#section1 .right-img {
+	top:60px;	
+	right:-80px;	
+}
+#section1 .left-img {
+	top:60px;	
+	left:-130px;	
+}
+
+/* section2 */
+#section2 {
+	background:#F7F8F9;
+	padding-top:150px;
+	position:relative;
+	padding-bottom:100px;
+	min-width:1440px;
+}
+#section2 .circle {
+	position:absolute;
+	width:20px;
+	height:20px;
+	border:1px rgb(202, 202, 202) solid;
+	border-radius:100%;
+	left:50%;
+	transform: translate(-44%);
+	top:-10px;
+}
+#section2 .circle .dot {
+	width:5px;
+	height:5px;
+	background:#b3b2b2;
+	border-radius:100%;
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+}
+
+.section2_top {
+	text-align:center;
+	margin-bottom:80px;
+}
+.section2_top h2 {
+	font-size:60px;
+	font-weight:bold;
+	margin-bottom:20px;
+}
+.section2_top p {
+	font-size:20px;
+	line-height:1.5;
+	color:#616161
+}
+#section2 ul {
+	display:flex;
+	flex-wrap:wrap;
+}
+#section2 li {
+	width:360px;
+	margin:0 60px 40px 0;
+}
+#section2 li:nth-child(3), #section2 li:nth-child(6) {
+	margin-right:0;
+} 
+.section2-img {
+	width:320px;
+	height:240px;
+	margin:0 0 40px 20px;
+}
+.section2-img img {
+	width:100%;
+	height:100%;
+	object-fit:cover;
+}
+.section2-txt {
+	letter-spacing:-1px;
+	text-align:center;
+	margin:0 30px;
+}
+.section2-txt h3 {
+	font-size:24px;
+	font-weight:bold;
+	margin-bottom:10px;
+}
+.section2-txt p {
+	font-size:14px;
+	line-height:1.5;
+	color:#616161
+}
+
+/* middle_banner */
+
+.middle_banner {
+	height:320px;
+	width:100%;
+	min-width:1440px;
+	background:url("../img/banner.png");
+	background-size:cover;
+	text-align:center;
+}
+.middle_banner a {
+	width:100%;
+	height:100%;
+	display:block;
+	color:#fff;
+	font-size:46px;
+	font-weight:bold;
+	line-height:320px;
+	letter-spacing:-3px;
+}
+
+/* section4 */
+
+#section4 {
+	background:#F7F8F9;
+	width:100%;
+	min-width:1440px;
+	min-height:1200px;
+	padding-bottom:300px;
+}
+.section4_top {
+	padding:200px 0 60px 0;
+	text-align:center;
+}
+.section4_top h2 {
+	font-size:60px;
+	font-weight:bold;
+	margin-bottom:30px;
+}
+.section4_top p {
+	color:#616161;
+	font-weight:bold;
+	font-size:18px;
+}
+#section4 .nav {
+	float:left;
+	text-align:center;
+	width:250px;
+	margin:0 10px 0 50px;
+	position:sticky;
+	top:100px;
+}
+	/* js 관련 */
+	#section4 .nav button.active {
+		background:#07b53b;
+		color:#fff;
+		border:none;
+		padding:9px 16px;
+	}
+#section4 .nav li {
+	margin-bottom:18px;
+	text-align:left;
+}
+#section4 .nav button {
+	border:1px #ccc9c9 solid;
+	padding:8px 15px;	
+	border-radius:50px;	
+	font-weight:bold;
+	background:transparent;
+	color:#4d4c4c;
+	cursor:pointer;
+}
+#section4 .nav::after {
+	display:block;
+	content:"";
+	clear:both;
+}
+.service_list {
+	display:flex;
+	flex-wrap:wrap;
+}
+.service_list li {
+	width:270px;
+	height:340px;
+	margin-bottom:40px;
+	background:#fff;
+	box-shadow:0 15px 15px 0 rgba(0,0,0,.1);
+	position:relative;	
+}
+.service_list li:not(.list_last) {
+	margin-right:40px;
+}
+.service_list .sub_menu {
+	opacity:0;
+	position:absolute;
+	top:0;
+	width:100%;
+	height:100%;
+	background:rgba(0,0,0,.8);
+	transition:.3s ease-in;
+}
+.service_list .service_download {
+	padding:75px 60px;	
+}
+.service_list .sub_menu a {
+	color:#fff;	
+	display:block;
+	width:150px;
+	height:50px;
+	border:1px #808080 solid;
+	border-radius:5px;	
+	text-align:center;	
+	font-size:14px;	
+}
+.service_list .service_download a {
+	margin-bottom:20px;
+}
+.service_list .sub_menu div {
+	float:left;
+	line-height:50px;
+}
+.service_list .sub_menu .sub_icon {
+	margin-left:10px;
+	width:40px;
+	height:50px;
+	background:url("../img/sprite-download-list.png") 3px 3px / 220px 143px;
+}
+.service_list .service_download .google { background-position-x:-42px; }
+.service_list .service_download .desktop { background-position-x:-90px; }
+
+.service_list li:hover .sub_menu {
+	opacity:1;
+}
+.service_list .sub_menu a:hover {
+	background:rgba(7,181,59,.9);
+	border:none;
+	padding:1px 1px;
+}
+.service_list .service_detail {
+	padding:145px 60px;
+}
+.service_list .sub_menu .detail { 
+	transform:scale(0.8);
+	/* 백그라운드 아이콘의 크기를 조절하고 싶다면 transform:scale()로 변경 가능 */
+	background-position-x:-180px; 
+}
+
+
+.service_list li .icon {
+	padding:30px 0 15px 28px;
+}
+.service_list li .icon img {
+	border:.5px rgba(0,0,0,.1) solid;
+	border-radius:16px;	
+}
+
+.service_list .txt {
+	padding-left:30px;
+
+}
+.service_list .txt h3 {
+	font-size:22px;
+	font-weight:600;
+	margin-bottom: 10px;
+}
+.service_list .txt p {
+	width:210px;
+	font-size:14px;
+	word-spacing:2px;
+	word-break: keep-all;
+	color:#777;
+	font-weight:600;
+	line-height:1.4;
+	letter-spacing:-1px;
+}
+
+.service_list .txt::after { 
+	/* 더보기 아이콘 */
+	display:block;
+	position:absolute;
+	content:"\30FB\30FB\30FB";
+	/* 점 표시하는 법 */
+	width:20px;
+	height:20px;
+	bottom:20px;
+	letter-spacing:-13px;
+	left:21px;
+	font-size:22px;
+	font-weight:bold;
+	color:#b9b6b6;
+}
+
+/* footer */
+
+footer .center {
+	padding:40px 20px;
+}
+.footer_top {
+	margin-left:20px;
+	border-bottom:1.5px solid rgb(228, 227, 227);
+	padding-bottom:20px;
+}
+.footer_top ul {
+	height:43px;	
+}
+.footer_top .line_icon {
+	float:left;
+	margin-right:15px;
+}
+.footer_top .line_icon img {
+	border-radius:10px;	
+}
+.footer_top ul {
+	padding:10px 0;
+}
+.footer_top li {
+	float:left;
+	margin-right:30px;
+	position:relative;
+}
+.footer_top li div {
+	float:left
+}
+.footer_top li .icon {
+	background:url("../img/sprite-download-list.png") -4px -42px / 165px 107px;
+	width:20px;
+	height:20px;
+	margin-right:1px;
+}
+.footer_top li .google {
+	background-position-x:-38px;
+}
+.footer_top li .pc {
+	background-position-x:-73px;
+}
+.footer_top li .window {
+	background-position-x:-108px;
+}
+.footer_top li a {
+	line-height:20px;
+	font-size:14px;
+}
+.footer_top li:not(:last-child)::before {
+	display:block;
+	position:absolute;
+	content:"";
+	width:1px;
+	height:15px;
+	background:rgb(218, 216, 216);
+	right:-16px;
+	top:3px;
+}
+
+.footer_bottom {
+	margin-left:20px;
+	padding:40px 0 20px 0;
+}
+.footer_bottom h4 {
+	float:left;
+	margin-right:35px;
+	font-size:14px;	
+
+}
+.footer_bottom li {
+	float:left;
+	margin:5px 30px 0 0;
+	position: relative;
+	font-size:12px;
+	letter-spacing:-1px;
+	font-weight:bold;	
+}
+.footer_bottom li:not(:last-child)::before {
+	display:block;
+	position:absolute;
+	content:"";
+	width:1px;
+	height:13px;
+	background:rgb(218, 216, 216);
+	right:-15px;
+	top:-1px;
+}
+.footer_bottom .sns {
+	float:right;
+	padding:0 10px 20px 0
+}
+.footer_bottom .youtube {
+	margin-right:8px;
+}
+.footer_bottom .youtube img {
+	width:30px;
+	height:22px;
+}
+.footer_bottom .facebook img {
+	width:22px;
+	height:22px;
+}
+
