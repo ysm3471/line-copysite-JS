@@ -8,12 +8,6 @@ const familyBtn = document.querySelector('.family_list');
 const familyList = document.querySelectorAll('.family_list li');
 const aTags = document.querySelectorAll('a');
 
-aTags.forEach(function(item){		// 모든 a태그 기능 초기화
-	item.onclick = function(e) {
-		e.preventDefault();
-	}
-})
-
 topNav.forEach(function(item,order) {		// 메뉴의 li에 마우르를 가져가면 서브메뉴가 내려오도록 하는 함수
 	let num = order;		
 	if (order < 3){		// 채용 부분에서는 발생하지 않도록 범위를 조절
